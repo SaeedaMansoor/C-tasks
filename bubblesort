@@ -1,0 +1,58 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int temp;
+	//int n; //array size	
+	int num[5];  //array name
+	//cout<<"enter the size of array="<<endl;
+	//cin>>n;
+	
+	for(int i=0;i<5;i++)
+	{cin>>num[i];
+	}
+	int *p=num;
+	cout<<*p;
+	for(int z=0;z<5;z++)
+	
+	{for(int j=z+1;j<5;j++)
+	{
+	 if(num[z]>num[j])
+	
+	{ temp=p[z];
+p[z]=p[j];
+	p[j]=temp;
+	
+	}
+}
+	}
+	
+
+
+
+	for(int a=0;a<5;a++)
+
+
+	{cout<<*p;
+p++;
+	}
+	return 0;
+	
+	
+	
+	
+}
+
+
+// This will print the address of variable var
+//cout<<&var;    
+
+/* This will also print the address of variable
+ * var because the pointer p holds the address of var
+ */
+///cout<<p;    
+
+/* This will print the value of var, This is 
+ * important, this is how we access the value of
+ * variable through pointer
+*/
+//cout<<*p;
