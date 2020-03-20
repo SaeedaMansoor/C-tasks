@@ -1,59 +1,36 @@
 #include<iostream>
 using namespace std;
-int main(){
-	int temp;
-	int n; //array size	
-	cout<<"enter the size of array="<<endl;
-	cin>>n;
-	int num[n];  //array name
+
+int main()
+{int temp;
+int n;
+cout<<"enter the  number="<<endl;
+cin>>n;
+    int num[n];
+    int *p;
+    p=num;
+    
+    for(int i=0;i<n;i++)
+    {cin>>num[i];
+	}
+	
 	
 	
 	for(int i=0;i<n;i++)
-	{cin>>num[i];
+	{for(int j=i+1;j<n;j++)
+{
+	if(*(p+i)>*(p+j))
+	{temp=*(p+i);
+	*(p+i)=*(p+j);
+	*(p+j)=temp;
 	}
-	int *p=num;
-	 //cout<<*p;
-	for(int z=0;z<n;z++)
-	
-	{for(int j=z+1;j<n;j++)
-	{
-	 if(num[z]>num[j])
-	
-	{ temp=p[z];
-p[z]=p[j];
-	p[j]=temp;
-	
 	}
 }
+	for(int i=0;i<n;i++)
+	{cout<<*p<<endl;
+	p++;
 	}
 	
-
-
-
-	for(int a=0;a<n;a++)
-
-
-	{cout<<*p;
-p++;
-	}
-	return 0;
-	
-	
-	
+return 0;	
 	
 }
-
-
-// This will print the address of variable var
-//cout<<&var;    
-
-/* This will also print the address of variable
- * var because the pointer p holds the address of var
- */
-///cout<<p;    
-
-/* This will print the value of var, This is 
- * important, this is how we access the value of
- * variable through pointer
-*/
-//cout<<*p;
