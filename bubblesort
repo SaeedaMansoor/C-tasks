@@ -2,19 +2,20 @@
 using namespace std;
 int main(){
 	int temp;
-	//int n; //array size	
-	int num[5];  //array name
-	//cout<<"enter the size of array="<<endl;
-	//cin>>n;
+	int n; //array size	
+	cout<<"enter the size of array="<<endl;
+	cin>>n;
+	int num[n];  //array name
 	
-	for(int i=0;i<5;i++)
+	
+	for(int i=0;i<n;i++)
 	{cin>>num[i];
 	}
 	int *p=num;
-	cout<<*p;
-	for(int z=0;z<5;z++)
+	 //cout<<*p;
+	for(int z=0;z<n;z++)
 	
-	{for(int j=z+1;j<5;j++)
+	{for(int j=z+1;j<n;j++)
 	{
 	 if(num[z]>num[j])
 	
@@ -29,7 +30,7 @@ p[z]=p[j];
 
 
 
-	for(int a=0;a<5;a++)
+	for(int a=0;a<n;a++)
 
 
 	{cout<<*p;
